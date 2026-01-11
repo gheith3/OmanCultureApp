@@ -1,0 +1,496 @@
+{
+  "figures": [
+    {
+      "id": 1,
+      "nameEn": "Sultan Qaboos bin Said",
+      "nameAr": "السلطان قابوس بن سعيد",
+      "category": "HISTORICAL_LEADERS",
+      "imageUrl": "https://cdn.britannica.com/42/208542-050-B3AD7574/Qaboos-bin-Said-2007.jpg?w=300",
+      "descriptionEn": "The Sultan of Oman from 1970 to 2020",
+      "descriptionAr": "سلطان عُمان من 1970 إلى 2020",
+      "biographyEn": "Sultan Qaboos bin Said Al Said was the Sultan of Oman from 23 July 1970 until his death in 2020. He rose to power after overthrowing his father, Said bin Taimur, in a palace coup in 1970. He was the longest-serving ruler in the Middle East and the Arab world at the time of his death.",
+      "biographyAr": "السلطان قابوس بن سعيد آل سعيد كان سلطان عُمان من 23 يوليو 1970 حتى وفاته في 2020. وصل إلى السلطة بعد الإطاحة بوالده سعيد بن تيمور في انقلاب قصر عام 1970. كان أطول حاكم خدمة في الشرق الأوسط والعالم العربي وقت وفاته.",
+      "achievementsEn": [
+        "Modernized Oman's infrastructure",
+        "Established diplomatic relations worldwide",
+        "Founded Sultan Qaboos University",
+        "Developed healthcare and education systems"
+      ],
+      "achievementsAr": [
+        "تحديث البنية التحتية لعُمان",
+        "إقامة علاقات دبلوماسية عالمية",
+        "تأسيس جامعة السلطان قابوس",
+        "تطوير أنظمة الرعاية الصحية والتعليم"
+      ],
+      "era": "1940-2020",
+      "yearsActive": 50,
+      "worksCount": 12
+    },
+    {
+      "id": 2,
+      "nameEn": "Said bin Sultan",
+      "nameAr": "سعيد بن سلطان",
+      "category": "HISTORICAL_LEADERS",
+      "imageUrl": "https://www.marefa.org/w/images/0/04/%D8%B3%D8%B9%D9%8A%D8%AF_%D8%A8%D9%86_%D8%B3%D9%84%D8%B7%D8%A7%D9%86.jpg",
+      "descriptionEn": "Sultan of Muscat and Oman (1806-1856)",
+      "descriptionAr": "سلطان مسقط وعُمان (1806-1856)",
+      "biographyEn": "Said bin Sultan was the Sultan of Muscat and Oman from 1806 to 1856. He built a commercial empire and moved his capital to Zanzibar, creating a maritime trading network across the Indian Ocean.",
+      "biographyAr": "سعيد بن سلطان كان سلطان مسقط وعُمان من 1806 إلى 1856. بنى إمبراطورية تجارية ونقل عاصمته إلى زنجبار، مُنشئًا شبكة تجارة بحرية عبر المحيط الهندي.",
+      "achievementsEn": [
+        "Expanded Omani influence to East Africa",
+        "Established Zanzibar as a trading hub",
+        "Signed treaties with Western powers"
+      ],
+      "achievementsAr": [
+        "توسيع النفوذ العُماني إلى شرق أفريقيا",
+        "تأسيس زنجبار كمركز تجاري",
+        "توقيع معاهدات مع القوى الغربية"
+      ],
+      "era": "1791-1856",
+      "yearsActive": 50,
+      "worksCount": 8
+    },
+    {
+      "id": 3,
+      "nameEn": "Sultan Haitham bin Tariq",
+      "nameAr": "السلطان هيثم بن طارق",
+      "category": "HISTORICAL_LEADERS",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJks85xj5g67q6I431zYw07Q43u2kkxwthqNNwSHpRn9YFgOuQw2cMUeomPa9DNHylJNL0vT0vbJp86tUdiJEeqnYeUh8oX6OMQO17AA&s=10",
+      "descriptionEn": "Current Sultan of Oman since 2020",
+      "descriptionAr": "سلطان عُمان الحالي منذ 2020",
+      "biographyEn": "Sultan Haitham bin Tariq Al Said is the current Sultan of Oman, ascending to the throne on 11 January 2020 following the death of Sultan Qaboos. He previously served as Minister of Heritage and Culture.",
+      "biographyAr": "السلطان هيثم بن طارق آل سعيد هو سلطان عُمان الحالي، اعتلى العرش في 11 يناير 2020 بعد وفاة السلطان قابوس. شغل سابقًا منصب وزير التراث والثقافة.",
+      "achievementsEn": [
+        "Launched Oman Vision 2040",
+        "Economic diversification initiatives",
+        "Continued modernization efforts"
+      ],
+      "achievementsAr": [
+        "إطلاق رؤية عُمان 2040",
+        "مبادرات التنويع الاقتصادي",
+        "استمرار جهود التحديث"
+      ],
+      "era": "1954-Present",
+      "yearsActive": 4,
+      "worksCount": 5
+    },
+    {
+      "id": 4,
+      "nameEn": "Abu Muslim al-Bahlani",
+      "nameAr": "أبو مسلم البهلاني",
+      "category": "POETS_WRITERS",
+      "imageUrl": "https://play-lh.googleusercontent.com/WOykgQa18jIFiAseuulMsBH1c8P39rRN8_nVh4lzNBuwSpdJaDA2nkQnXZc-0gEvvEA",
+      "descriptionEn": "Renowned Omani poet and scholar",
+      "descriptionAr": "شاعر وعالم عُماني مشهور",
+      "biographyEn": "Abu Muslim Nasir bin Salim bin Udayyim al-Rawahi al-Bahlani was one of the most famous Omani poets. His poetry covered religious, social, and patriotic themes.",
+      "biographyAr": "أبو مسلم ناصر بن سالم بن عديم الرواحي البهلاني كان من أشهر الشعراء العُمانيين. تناول شعره موضوعات دينية واجتماعية ووطنية.",
+      "achievementsEn": [
+        "Authored numerous poetry collections",
+        "Contributed to Omani literary heritage",
+        "Influenced generations of poets"
+      ],
+      "achievementsAr": [
+        "تأليف مجموعات شعرية عديدة",
+        "المساهمة في التراث الأدبي العُماني",
+        "التأثير على أجيال من الشعراء"
+      ],
+      "era": "1860-1920",
+      "yearsActive": 40,
+      "worksCount": 15
+    },
+    {
+      "id": 5,
+      "nameEn": "Abdullah al-Tai",
+      "nameAr": "عبدالله الطائي",
+      "category": "POETS_WRITERS",
+      "imageUrl": "https://jbhsc.ae/wp-content/uploads/2020/06/%D8%A7%D9%84%D8%B4%D8%A7%D8%B9%D8%B1-%D8%B9%D8%A8%D8%AF-%D8%A7%D9%84%D9%84%D9%87-%D8%A7%D9%84%D8%B7%D8%A7%D8%A6%D9%8A-%D9%84%D8%B3%D8%A7%D9%86-1.jpg",
+      "descriptionEn": "Pioneer of modern Omani literature",
+      "descriptionAr": "رائد الأدب العُماني الحديث",
+      "biographyEn": "Abdullah al-Tai was a pioneering Omani writer and journalist who played a significant role in the development of modern Omani literature and media.",
+      "biographyAr": "عبدالله الطائي كان كاتبًا وصحفيًا عُمانيًا رائدًا لعب دورًا مهمًا في تطوير الأدب والإعلام العُماني الحديث.",
+      "achievementsEn": [
+        "Founded early Omani newspapers",
+        "Wrote influential novels and stories",
+        "Documented Omani history and culture"
+      ],
+      "achievementsAr": [
+        "تأسيس الصحف العُمانية الأولى",
+        "كتابة روايات وقصص مؤثرة",
+        "توثيق التاريخ والثقافة العُمانية"
+      ],
+      "era": "1924-1973",
+      "yearsActive": 30,
+      "worksCount": 20
+    },
+    {
+      "id": 6,
+      "nameEn": "Salim bin Ali",
+      "nameAr": "سالم بن علي ",
+      "category": "ARTISTS",
+      "imageUrl": "https://s.alqabas.com/wp-content/uploads/2017/11/29801626.jpg",
+      "descriptionEn": "Traditional Omani musician",
+      "descriptionAr": "موسيقي عُماني تقليدي",
+      "biographyEn": "A master of traditional Omani music, known for preserving and performing classical Omani musical traditions.",
+      "biographyAr": "أستاذ في الموسيقى العُمانية التقليدية، معروف بالحفاظ على التقاليد الموسيقية العُمانية الكلاسيكية وأدائها.",
+      "achievementsEn": [
+        "Preserved traditional Omani music",
+        "Trained new generations of musicians",
+        "Performed at national events"
+      ],
+      "achievementsAr": [
+        "الحفاظ على الموسيقى العُمانية التقليدية",
+        "تدريب أجيال جديدة من الموسيقيين",
+        "الأداء في المناسبات الوطنية"
+      ],
+      "era": "1950-Present",
+      "yearsActive": 50,
+      "worksCount": 25
+    },
+    {
+      "id": 7,
+      "nameEn": "Ali Al-Habsi",
+      "nameAr": "علي الحبسي",
+      "category": "SPORTS",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa1q1zc2SXZWYKzlt9uefNzALQGbxhF4SCnA&s",
+      "descriptionEn": "Legendary Omani football goalkeeper",
+      "descriptionAr": "حارس مرمى عُماني أسطوري",
+      "biographyEn": "Ali Abdullah Hamed Al-Habsi is an Omani professional footballer who played as a goalkeeper. He had a successful career in the English Premier League with clubs like Bolton Wanderers and Wigan Athletic.",
+      "biographyAr": "علي عبدالله حامد الحبسي هو لاعب كرة قدم عُماني محترف لعب كحارس مرمى. حقق مسيرة ناجحة في الدوري الإنجليزي الممتاز مع أندية مثل بولتون واندررز وويغان أثلتيك.",
+      "achievementsEn": [
+        "First Omani to play in Premier League",
+        "Multiple Omani Player of the Year awards",
+        "Over 100 caps for national team"
+      ],
+      "achievementsAr": [
+        "أول عُماني يلعب في الدوري الممتاز",
+        "جوائز متعددة لأفضل لاعب عُماني",
+        "أكثر من 100 مباراة دولية"
+      ],
+      "era": "1981-Present",
+      "yearsActive": 20,
+      "worksCount": 100
+    },
+    {
+      "id": 8,
+      "nameEn": "Ahmed Al-Maashani",
+      "nameAr": "أحمد المعشني",
+      "category": "SPORTS",
+      "imageUrl": "https://assets.kooora.com/images/v3/kooora_1038575_1/koo_280498.jpg?quality=60&auto=webp&format=pjpg",
+      "descriptionEn": "Omani football striker",
+      "descriptionAr": "مهاجم كرة قدم عُماني",
+      "biographyEn": "Ahmed Al-Maashani is an Omani professional footballer known for his goal-scoring abilities and contributions to the national team.",
+      "biographyAr": "أحمد المعشني هو لاعب كرة قدم عُماني محترف معروف بقدراته التهديفية ومساهماته في المنتخب الوطني.",
+      "achievementsEn": [
+        "Top scorer in Omani league",
+        "Key player for national team",
+        "Multiple championship titles"
+      ],
+      "achievementsAr": [
+        "هداف الدوري العُماني",
+        "لاعب أساسي في المنتخب الوطني",
+        "ألقاب بطولات متعددة"
+      ],
+      "era": "1990-Present",
+      "yearsActive": 15,
+      "worksCount": 50
+    },
+    {
+      "id": 9,
+      "nameEn": "Ahmed bin Majid",
+      "nameAr": "أحمد بن ماجد",
+      "category": "SCHOLARS",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjqtYl5GVw-a52r_VuW8ZJp_Hh6DSyMLBL9A&s",
+      "descriptionEn": "Famous Arab navigator and cartographer",
+      "descriptionAr": "ملاح ورسام خرائط عربي شهير",
+      "biographyEn": "Ahmad ibn Majid was an Arab navigator and cartographer born in Julfar (present-day UAE/Oman region). He is considered one of the greatest navigators in history and wrote numerous texts on navigation.",
+      "biographyAr": "أحمد بن ماجد كان ملاحًا ورسام خرائط عربيًا ولد في جلفار. يُعتبر من أعظم الملاحين في التاريخ وكتب نصوصًا عديدة عن الملاحة.",
+      "achievementsEn": [
+        "Authored 'Kitab al-Fawa'id'",
+        "Guided Vasco da Gama to India",
+        "Advanced maritime navigation techniques"
+      ],
+      "achievementsAr": [
+        "تأليف 'كتاب الفوائد'",
+        "إرشاد فاسكو دا غاما إلى الهند",
+        "تطوير تقنيات الملاحة البحرية"
+      ],
+      "era": "1421-1500",
+      "yearsActive": 50,
+      "worksCount": 40
+    },
+    {
+      "id": 10,
+      "nameEn": "Mona Al-Said",
+      "nameAr": "منى آل سعيد",
+      "category": "MODERN",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsQv9UNcOCx8QrkqzznydC51dTkSYr3YKK9g&s",
+      "descriptionEn": "Omani businesswoman and entrepreneur",
+      "descriptionAr": "سيدة أعمال ورائدة أعمال عُمانية",
+      "biographyEn": "A prominent Omani businesswoman who has contributed to the economic development of Oman through various entrepreneurial ventures.",
+      "biographyAr": "سيدة أعمال عُمانية بارزة ساهمت في التنمية الاقتصادية لعُمان من خلال مشاريع ريادية متنوعة.",
+      "achievementsEn": [
+        "Founded successful businesses",
+        "Promoted women entrepreneurship",
+        "Contributed to economic diversification"
+      ],
+      "achievementsAr": [
+        "تأسيس أعمال ناجحة",
+        "تعزيز ريادة الأعمال النسائية",
+        "المساهمة في التنويع الاقتصادي"
+      ],
+      "era": "1970-Present",
+      "yearsActive": 25,
+      "worksCount": 10
+    },
+    {
+      "id": 11,
+      "nameEn": "Imam Ahmed bin Said",
+      "nameAr": "الإمام أحمد بن سعيد",
+      "category": "HISTORICAL_LEADERS",
+      "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTZ8JAwGn_bMdpxno_X1wYFuwh-8GX9yBL4sIEyV1TuaxKutZ3f",
+      "descriptionEn": "Founder of the Al Said dynasty",
+      "descriptionAr": "مؤسس سلالة آل سعيد",
+      "biographyEn": "Imam Ahmed bin Said Al Busaidi was the founder of the current ruling Al Said dynasty of Oman. He united Oman and expelled the Persians, establishing a powerful maritime state.",
+      "biographyAr": "الإمام أحمد بن سعيد البوسعيدي كان مؤسس سلالة آل سعيد الحاكمة حاليًا في عُمان. وحّد عُمان وطرد الفرس، مؤسسًا دولة بحرية قوية.",
+      "achievementsEn": [
+        "Founded the Al Said dynasty in 1744",
+        "Expelled Persian invaders from Oman",
+        "Established Omani naval supremacy",
+        "United the country under one rule"
+      ],
+      "achievementsAr": [
+        "تأسيس سلالة آل سعيد عام 1744",
+        "طرد الغزاة الفرس من عُمان",
+        "تأسيس السيادة البحرية العُمانية",
+        "توحيد البلاد تحت حكم واحد"
+      ],
+      "era": "1694-1783",
+      "yearsActive": 39,
+      "worksCount": 6
+    },
+    {
+      "id": 12,
+      "nameEn": "Saif al-Rahbi",
+      "nameAr": "سيف الرحبي",
+      "category": "POETS_WRITERS",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNZSQ9Jk_QFFgkII-utp97BvWPHxAgaQqqIA&s",
+      "descriptionEn": "Prominent Omani poet and cultural figure",
+      "descriptionAr": "شاعر ومثقف عُماني بارز",
+      "biographyEn": "Saif al-Rahbi is one of the most prominent contemporary Omani poets and intellectuals. Born in 1956 in Oman, he is known for his modernist Arabic poetry and has founded the cultural magazine 'Nizwa'. His works explore themes of identity, exile, and the human condition.",
+      "biographyAr": "سيف الرحبي من أبرز الشعراء والمثقفين العُمانيين المعاصرين. ولد عام 1956 في عُمان، ويُعرف بشعره العربي الحداثي وأسس مجلة 'نزوى' الثقافية. تستكشف أعماله موضوعات الهوية والمنفى والحالة الإنسانية.",
+      "achievementsEn": [
+        "Founded Nizwa cultural magazine",
+        "Published numerous poetry collections",
+        "Won Sultan Qaboos Award for Culture and Arts",
+        "Translated into multiple languages"
+      ],
+      "achievementsAr": [
+        "أسس مجلة نزوى الثقافية",
+        "نشر مجموعات شعرية عديدة",
+        "فاز بجائزة السلطان قابوس للثقافة والفنون",
+        "تُرجمت أعماله إلى لغات متعددة"
+      ],
+      "era": "1956-Present",
+      "yearsActive": 50,
+      "worksCount": 25
+    },
+    {
+      "id": 13,
+      "nameEn": "Jokha Alharthi",
+      "nameAr": "جوخة الحارثي",
+      "category": "POETS_WRITERS",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBV0A0VuqRVSuPb5TP3Tpb5fr5g0of3rESzw&s",
+      "descriptionEn": "First Arab winner of Man Booker International Prize",
+      "descriptionAr": "أول عربية تفوز بجائزة مان بوكر الدولية",
+      "biographyEn": "Jokha Alharthi is an Omani author who made history as the first Arabic-language writer to win the Man Booker International Prize in 2019 for her novel 'Celestial Bodies'.",
+      "biographyAr": "جوخة الحارثي كاتبة عُمانية صنعت التاريخ كأول كاتبة عربية تفوز بجائزة مان بوكر الدولية عام 2019 عن روايتها 'سيدات القمر'.",
+      "achievementsEn": [
+        "Won Man Booker International Prize 2019",
+        "Author of 'Celestial Bodies'",
+        "Professor at Sultan Qaboos University",
+        "Multiple literary awards"
+      ],
+      "achievementsAr": [
+        "فازت بجائزة مان بوكر الدولية 2019",
+        "مؤلفة رواية 'سيدات القمر'",
+        "أستاذة في جامعة السلطان قابوس",
+        "جوائز أدبية متعددة"
+      ],
+      "era": "1978-Present",
+      "yearsActive": 20,
+      "worksCount": 8
+    },
+    {
+      "id": 14,
+      "nameEn": "Anwar Sonya",
+      "nameAr": "أنور سونيا",
+      "category": "ARTISTS",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrCCNXeG2D2SOheZfMgm2Ca-qaKKJFuVJQOw&s",
+      "descriptionEn": "Pioneer of Omani visual arts",
+      "descriptionAr": "رائد الفنون البصرية العُمانية",
+      "biographyEn": "Anwar Sonya is considered one of the pioneers of contemporary visual arts in Oman, known for blending traditional Omani themes with modern artistic techniques.",
+      "biographyAr": "يُعتبر أنور سونيا من رواد الفنون البصرية المعاصرة في عُمان، معروف بدمج الموضوعات العُمانية التقليدية مع التقنيات الفنية الحديثة.",
+      "achievementsEn": [
+        "Exhibited internationally",
+        "Founded art education programs",
+        "Preserved Omani artistic heritage"
+      ],
+      "achievementsAr": [
+        "عرض أعماله دوليًا",
+        "أسس برامج تعليم الفن",
+        "حافظ على التراث الفني العُماني"
+      ],
+      "era": "1948-Present",
+      "yearsActive": 50,
+      "worksCount": 200
+    },
+    {
+      "id": 15,
+      "nameEn": "Imad Al-Hosni",
+      "nameAr": "عماد الحوسني",
+      "category": "SPORTS",
+      "imageUrl": "https://assets.kooora.com/images/v3/kooora_764670_1/sport1.711746.jpg?quality=60&auto=webp&format=pjpg",
+      "descriptionEn": "Omani football captain and defender",
+      "descriptionAr": "قائد ومدافع المنتخب العُماني",
+      "biographyEn": "Imad Al-Hosni is a professional Omani footballer who has served as captain of the Oman national team. Known for his leadership and defensive skills.",
+      "biographyAr": "عماد الحوسني لاعب كرة قدم عُماني محترف شغل منصب قائد المنتخب العُماني. معروف بقيادته ومهاراته الدفاعية.",
+      "achievementsEn": [
+        "Captain of Oman national team",
+        "Gulf Cup winner",
+        "Over 80 international caps"
+      ],
+      "achievementsAr": [
+        "قائد المنتخب العُماني",
+        "فائز بكأس الخليج",
+        "أكثر من 80 مباراة دولية"
+      ],
+      "era": "1987-Present",
+      "yearsActive": 18,
+      "worksCount": 85
+    },
+    {
+      "id": 16,
+      "nameEn": "Mohsin Al-Ghassani",
+      "nameAr": "محسن الغساني",
+      "category": "SPORTS",
+      "imageUrl": "https://assets.kooora.com/images/v3/kooora_913386_1/koo_204276.jpg?quality=60&auto=webp&format=pjpg&width=1400",
+      "descriptionEn": "Omani rally driver champion",
+      "descriptionAr": "بطل سباقات الراليات العُماني",
+      "biographyEn": "Mohsin Al-Ghassani is a renowned Omani rally driver who has represented Oman in international motorsport competitions and won multiple regional championships.",
+      "biographyAr": "محسن الغساني سائق راليات عُماني مشهور مثّل عُمان في مسابقات رياضة السيارات الدولية وفاز ببطولات إقليمية متعددة.",
+      "achievementsEn": [
+        "Multiple Middle East Rally Championship titles",
+        "Represented Oman in World Rally Championship",
+        "Promoted motorsport in Oman"
+      ],
+      "achievementsAr": [
+        "ألقاب متعددة في بطولة الشرق الأوسط للراليات",
+        "مثّل عُمان في بطولة العالم للراليات",
+        "روّج لرياضة السيارات في عُمان"
+      ],
+      "era": "1975-Present",
+      "yearsActive": 30,
+      "worksCount": 45
+    },
+    {
+      "id": 17,
+      "nameEn": "Sheikh Ahmed al-Khalili",
+      "nameAr": "الشيخ أحمد الخليلي",
+      "category": "SCHOLARS",
+      "imageUrl": "https://pbs.twimg.com/profile_images/1478646424174747650/g2jeTkT8_400x400.jpg",
+      "descriptionEn": "Grand Mufti of Oman",
+      "descriptionAr": "المفتي العام لسلطنة عُمان",
+      "biographyEn": "Sheikh Ahmed bin Hamad al-Khalili is the Grand Mufti of Oman, the highest religious authority in the country. He is known for his scholarly works and moderate Islamic teachings.",
+      "biographyAr": "الشيخ أحمد بن حمد الخليلي هو المفتي العام لسلطنة عُمان، أعلى سلطة دينية في البلاد. معروف بأعماله العلمية وتعاليمه الإسلامية المعتدلة.",
+      "achievementsEn": [
+        "Appointed Grand Mufti in 1975",
+        "Authored numerous Islamic scholarly works",
+        "Promoted interfaith dialogue",
+        "Established religious education programs"
+      ],
+      "achievementsAr": [
+        "عُيّن مفتيًا عامًا عام 1975",
+        "ألّف أعمالًا علمية إسلامية عديدة",
+        "روّج للحوار بين الأديان",
+        "أسس برامج التعليم الديني"
+      ],
+      "era": "1942-Present",
+      "yearsActive": 49,
+      "worksCount": 35
+    },
+    {
+      "id": 18,
+      "nameEn": "Dr. Asila Al-Maamari",
+      "nameAr": "د. أصيلة المعمري",
+      "category": "SCHOLARS",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLhJ-ztUR_bk0DgEa4CdwJOAzYaiZp9bfhHQ&s",
+      "descriptionEn": "Omani scientist and researcher",
+      "descriptionAr": "عالمة وباحثة عُمانية",
+      "biographyEn": "Dr. Asila Al-Maamari is a prominent Omani scientist known for her research contributions in environmental science and sustainable development.",
+      "biographyAr": "د. أصيلة المعمري عالمة عُمانية بارزة معروفة بمساهماتها البحثية في علوم البيئة والتنمية المستدامة.",
+      "achievementsEn": [
+        "Published research in international journals",
+        "Contributed to environmental policies",
+        "Mentored young Omani scientists"
+      ],
+      "achievementsAr": [
+        "نشرت أبحاثًا في مجلات دولية",
+        "ساهمت في السياسات البيئية",
+        "أرشدت العلماء العُمانيين الشباب"
+      ],
+      "era": "1970-Present",
+      "yearsActive": 25,
+      "worksCount": 30
+    },
+    {
+      "id": 19,
+      "nameEn": "Khalid Al-Sinani",
+      "nameAr": "خالد السناني",
+      "category": "MODERN",
+      "imageUrl": "https://pbs.twimg.com/profile_images/1695410373623427072/9AgTqncS_400x400.jpg",
+      "descriptionEn": "Omani tech entrepreneur",
+      "descriptionAr": "رائد أعمال تقني عُماني",
+      "biographyEn": "Khalid Al-Sinani is a leading Omani tech entrepreneur who has founded multiple successful startups and contributed to Oman's digital transformation.",
+      "biographyAr": "خالد السناني رائد أعمال تقني عُماني رائد أسس شركات ناشئة ناجحة متعددة وساهم في التحول الرقمي لعُمان.",
+      "achievementsEn": [
+        "Founded successful tech startups",
+        "Promoted digital innovation in Oman",
+        "Mentored young entrepreneurs"
+      ],
+      "achievementsAr": [
+        "أسس شركات تقنية ناجحة",
+        "روّج للابتكار الرقمي في عُمان",
+        "أرشد رواد الأعمال الشباب"
+      ],
+      "era": "1985-Present",
+      "yearsActive": 15,
+      "worksCount": 8
+    },
+    {
+      "id": 20,
+      "nameEn": "Fatma Al-Nabhani",
+      "nameAr": "فاطمة النبهاني",
+      "category": "MODERN",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVOAKG1ntvUB5cJ2TGS7SBKnQwP3CnX1jd1Q&s",
+      "descriptionEn": "Omani tennis pioneer",
+      "descriptionAr": "رائدة التنس العُمانية",
+      "biographyEn": "Fatma Al-Nabhani is a pioneering Omani tennis player who became the first Omani woman to compete professionally in international tennis tournaments.",
+      "biographyAr": "فاطمة النبهاني لاعبة تنس عُمانية رائدة أصبحت أول امرأة عُمانية تنافس باحتراف في بطولات التنس الدولية.",
+      "achievementsEn": [
+        "First Omani woman in professional tennis",
+        "Represented Oman in Fed Cup",
+        "Inspired women in sports",
+        "Multiple national titles"
+      ],
+      "achievementsAr": [
+        "أول امرأة عُمانية في التنس المحترف",
+        "مثّلت عُمان في كأس الاتحاد",
+        "ألهمت النساء في الرياضة",
+        "ألقاب وطنية متعددة"
+      ],
+      "era": "1991-Present",
+      "yearsActive": 15,
+      "worksCount": 25
+    }
+  ]
+}

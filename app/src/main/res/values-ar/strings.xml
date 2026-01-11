@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ثقافة عُمان</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_favorites">المفضلة</string>
+    <string name="nav_settings">الإعدادات</string>
+    
+    <!-- Home Screen -->
+    <string name="discover_oman">اكتشف عُمان</string>
+    <string name="search_figures">ابحث عن الشخصيات…</string>
+    <string name="all_categories">الكل</string>
+    
+    <!-- Detail Screen -->
+    <string name="biography">السيرة الذاتية</string>
+    <string name="achievements">الإنجازات</string>
+    <string name="era">الفترة</string>
+    <string name="works">الأعمال</string>
+    <string name="years">سنوات</string>
+    
+    <!-- Favorites Screen -->
+    <string name="favorites_title">المفضلة</string>
+    <string name="saved_figures">شخصيات محفوظة</string>
+    <string name="no_favorites">لا توجد مفضلات بعد</string>
+    <string name="no_favorites_hint">اضغط على أيقونة القلب على أي شخصية لحفظها هنا</string>
+    <string name="explore_figures">استكشف الشخصيات</string>
+    
+    <!-- Onboarding -->
+    <string name="welcome_title">مرحباً بك في ثقافة عُمان</string>
+    <string name="welcome_desc">اكتشف التراث الغني لسلطنة عُمان</string>
+    <string name="heritage_title">أرض التراث</string>
+    <string name="heritage_desc">تشتهر عُمان بقلاعها القديمة ومناظرها الخلابة وكرم الضيافة على مدى 5000 عام من الحضارة.</string>
+    <string name="icons_title">تعرف على الرموز</string>
+    <string name="icons_desc">استكشف القادة والشعراء والفنانين والرياضيين والعلماء الذين شكلوا هوية عُمان.</string>
+    <string name="language_title">اختر لغتك</string>
+    <string name="language_desc">اختر لغتك المفضلة للمتابعة</string>
+    <string name="skip">تخطي</string>
+    <string name="next">التالي</string>
+    <string name="back">رجوع</string>
+    <string name="start_exploring">ابدأ الاستكشاف</string>
+    
+    <!-- Categories -->
+    <string name="category_historical_leaders">القادة التاريخيون</string>
+    <string name="category_poets_writers">الشعراء والكتّاب</string>
+    <string name="category_artists">الفنانون والموسيقيون</string>
+    <string name="category_sports">أيقونات الرياضة</string>
+    <string name="category_scholars">العلماء والباحثون</string>
+    <string name="category_modern">المؤثرون المعاصرون</string>
+    
+    <!-- Empty States -->
+    <string name="no_results">لا توجد نتائج</string>
+    <string name="try_different_search">جرب البحث بكلمات مختلفة</string>
+    <string name="figure_not_found">الشخصية غير موجودة</string>
+</resources>

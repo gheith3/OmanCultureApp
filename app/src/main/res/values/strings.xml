@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Oman Culture</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_favorites">Favorites</string>
+    <string name="nav_settings">Settings</string>
+    
+    <!-- Home Screen -->
+    <string name="discover_oman">Discover Oman</string>
+    <string name="search_figures">Search figures…</string>
+    <string name="all_categories">All</string>
+    
+    <!-- Detail Screen -->
+    <string name="biography">Biography</string>
+    <string name="achievements">Achievements</string>
+    <string name="era">Era</string>
+    <string name="works">Works</string>
+    <string name="years">Years</string>
+    
+    <!-- Favorites Screen -->
+    <string name="favorites_title">Favorites</string>
+    <string name="saved_figures">saved figures</string>
+    <string name="no_favorites">No favorites yet</string>
+    <string name="no_favorites_hint">Tap the heart icon on any figure to save them here</string>
+    <string name="explore_figures">Explore Figures</string>
+    
+    <!-- Onboarding -->
+    <string name="welcome_title">Welcome to Oman Culture</string>
+    <string name="welcome_desc">Discover the rich heritage of the Sultanate of Oman</string>
+    <string name="heritage_title">Land of Heritage</string>
+    <string name="heritage_desc">Oman is known for its ancient forts, stunning landscapes, and warm hospitality spanning over 5,000 years of civilization.</string>
+    <string name="icons_title">Meet the Icons</string>
+    <string name="icons_desc">Explore legendary leaders, poets, artists, athletes, and scholars who shaped Oman\'s identity.</string>
+    <string name="language_title">Choose Your Language</string>
+    <string name="language_desc">Select your preferred language to continue</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="start_exploring">Start Exploring</string>
+    
+    <!-- Categories -->
+    <string name="category_historical_leaders">Historical Leaders</string>
+    <string name="category_poets_writers">Poets &amp; Writers</string>
+    <string name="category_artists">Artists &amp; Musicians</string>
+    <string name="category_sports">Sports Icons</string>
+    <string name="category_scholars">Scientists &amp; Scholars</string>
+    <string name="category_modern">Modern Influencers</string>
+    
+    <!-- Empty States -->
+    <string name="no_results">No results found</string>
+    <string name="try_different_search">Try searching with different keywords</string>
+    <string name="figure_not_found">Figure not found</string>
+</resources>

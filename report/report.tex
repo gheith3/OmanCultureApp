@@ -1,0 +1,912 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\graphicspath{{./screenshot/}}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Define the brown/tan color from the image
+\definecolor{headercolor}{RGB}{150, 110, 60}
+\definecolor{omanred}{RGB}{200, 16, 46}
+\definecolor{omangreen}{RGB}{0, 128, 0}
+\usepackage{fancyhdr}
+
+% Code listing settings
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10},
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    tabsize=2
+}
+
+% Page style
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Oman Culture App}
+\lhead{Gheith ALRawahi}
+\rfoot{Page \thepage}
+
+% Title formatting with brown color
+\titleformat{\section}{\large\bfseries\color{headercolor}}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+% Title Section
+\begin{center}
+    {\LARGE\itshape\color{headercolor}Report Name: Oman Culture Mobile Application}\\[1.5cm]
+\end{center}
+
+\noindent
+\begin{tabular}{@{}p{0.45\textwidth}p{0.45\textwidth}@{}}
+\underline{\textit{Student ID:}\hspace{2cm}2120246006\hspace{1cm}} & \underline{\textit{Name:}\hspace{2cm}Gheith ALRawahi\hspace{1cm}} \\
+\end{tabular}
+\vspace{1cm}
+
+\section{INTRODUCTION}
+
+This report presents the Oman Culture Mobile Application, a comprehensive Android app showcasing Oman's rich cultural heritage through famous Omani figures across different categories. The application is built using modern Android development technologies including Kotlin and Jetpack Compose.
+
+\textbf{Application Features:}
+\begin{itemize}
+    \item Multi-language support (English and Arabic with RTL layout)
+    \item Interactive onboarding experience introducing Oman's heritage
+    \item Browse famous Omani figures across 6 categories
+    \item Detailed biographies and achievements
+    \item Favorites system with local storage
+    \item Modern Material 3 design
+    \item Smooth animations and transitions
+    \item Search functionality
+    \item Category-based filtering
+\end{itemize}
+
+The app demonstrates best practices in Android development including MVVM architecture, clean code separation, state management with ViewModels, and efficient image loading. It features 20 carefully curated Omani figures spanning historical leaders, poets, artists, athletes, and scholars.
+
+\textbf{Source Code:} The complete source code is available on GitHub at:
+
+\url{https://github.com/gheith3/oman-culture-app}
+
+\section{SOLUTIONS}
+
+The application utilizes modern Android development tools and libraries:
+
+\subsection{Core Technologies}
+
+\begin{itemize}
+    \item \textbf{Kotlin}: Modern programming language for Android
+    \item \textbf{Jetpack Compose}: Declarative UI framework for building native Android interfaces
+    \item \textbf{Material 3}: Latest Material Design components and theming
+    \item \textbf{Navigation Compose}: Type-safe navigation between screens
+    \item \textbf{ViewModel \& Lifecycle}: State management and lifecycle-aware components
+    \item \textbf{Coil}: Efficient image loading library with caching support
+    \item \textbf{DataStore Preferences}: Modern data storage for favorites
+    \item \textbf{Compose Icons}: Material Icons Extended and Feather Icons
+\end{itemize}
+
+\subsection{Architecture Pattern}
+
+The app follows \textbf{MVVM (Model-View-ViewModel)} architecture:
+
+\begin{itemize}
+    \item \textbf{Model}: Data classes (Figure, Category) and Repository pattern
+    \item \textbf{View}: Composable UI components and screens
+    \item \textbf{ViewModel}: Business logic and state management
+    \item \textbf{Repository}: Single source of truth for data access
+\end{itemize}
+
+\subsection{Design System}
+
+The app uses a modern color palette with Material 3 design principles:
+
+\begin{itemize}
+    \item \textbf{Primary Red (\#E63946)}: Main accent color, headers, CTAs, gradient borders
+    \item \textbf{Secondary Blue (\#457B9D)}: Secondary accent, category colors
+    \item \textbf{Tertiary Orange (\#F4A261)}: Tertiary accent, highlights
+    \item \textbf{Background}: Light (\#FAFAFA) / Dark (\#121212)
+    \item \textbf{Surface}: White (\#FFFFFF) / Dark Gray (\#1E1E1E)
+\end{itemize}
+
+\section{DETAILS}
+
+\subsection{Project Structure}
+
+The application follows a clean, modular structure:
+
+\begin{lstlisting}[language=bash, caption=Project Directory Structure]
+app/src/main/java/com/oman/culture/
+├── MainActivity.kt
+├── OmanCultureApp.kt
+├── data/
+│   ├── local/
+│   │   └── FavoritesDataStore.kt
+│   ├── model/
+│   │   ├── Figure.kt
+│   │   └── Category.kt
+│   └── repository/
+│       └── FiguresRepository.kt
+├── ui/
+│   ├── theme/
+│   │   ├── Color.kt
+│   │   ├── Theme.kt
+│   │   ├── Type.kt
+│   │   └── Shape.kt
+│   ├── navigation/
+│   │   └── NavGraph.kt
+│   ├── components/
+│   │   ├── FigureCard.kt
+│   │   ├── FigureAvatar.kt
+│   │   ├── CategoryChip.kt
+│   │   ├── StatsRow.kt
+│   │   ├── AnimatedBottomBar.kt
+│   │   ├── LanguageSwitcher.kt
+│   │   └── SearchBar.kt
+│   └── screens/
+│       ├── onboarding/
+│       │   ├── OnboardingScreen.kt
+│       │   └── OnboardingPreferences.kt
+│       ├── home/
+│       │   ├── HomeScreen.kt
+│       │   └── HomeViewModel.kt
+│       ├── detail/
+│       │   ├── DetailScreen.kt
+│       │   └── DetailViewModel.kt
+│       ├── favorites/
+│       │   ├── FavoritesScreen.kt
+│       │   └── FavoritesViewModel.kt
+│       └── settings/
+│           └── SettingsScreen.kt
+└── localization/
+    └── LocaleManager.kt
+\end{lstlisting}
+
+\subsection{Data Models}
+
+\textbf{Figure Data Class:}
+
+The core data model supports bilingual content:
+
+\begin{lstlisting}[language=Kotlin, caption=Figure.kt Data Model]
+data class Figure(
+    val id: Int,
+    val nameEn: String,
+    val nameAr: String,
+    val category: Category,
+    val imageUrl: String,
+    val descriptionEn: String,
+    val descriptionAr: String,
+    val biographyEn: String,
+    val biographyAr: String,
+    val achievementsEn: List<String>,
+    val achievementsAr: List<String>,
+    val era: String,
+    val isFavorite: Boolean = false
+) {
+    fun getName(isArabic: Boolean) = 
+        if (isArabic) nameAr else nameEn
+    fun getDescription(isArabic: Boolean) = 
+        if (isArabic) descriptionAr else descriptionEn
+    fun getBiography(isArabic: Boolean) = 
+        if (isArabic) biographyAr else biographyEn
+    fun getAchievements(isArabic: Boolean) = 
+        if (isArabic) achievementsAr else achievementsEn
+}
+\end{lstlisting}
+
+\textbf{Category Enum:}
+
+Six categories organize the figures:
+
+\begin{lstlisting}[language=Kotlin, caption=Category.kt - Bilingual Enum]
+enum class Category(
+    val id: String,
+    val displayNameEn: String,
+    val displayNameAr: String,
+    val descriptionEn: String,
+    val descriptionAr: String,
+    val icon: ImageVector,
+    val color: Color
+) {
+    HISTORICAL_LEADERS(
+        id = "historical_leaders",
+        displayNameEn = "Historical Leaders",
+        displayNameAr = "القادة التاريخيون",
+        descriptionEn = "Sultans and rulers who shaped Oman's history",
+        descriptionAr = "السلاطين والحكام الذين شكلوا تاريخ عُمان",
+        icon = Icons.Default.AccountBalance,
+        color = Primary
+    ),
+    POETS_WRITERS(
+        id = "poets_writers",
+        displayNameEn = "Poets & Writers",
+        displayNameAr = "الشعراء والكتّاب",
+        descriptionEn = "Literary figures who enriched Omani culture",
+        descriptionAr = "الأدباء الذين أثروا الثقافة العُمانية",
+        icon = Icons.Default.MenuBook,
+        color = Secondary
+    );
+    // ... other categories
+    
+    fun getDisplayName(isArabic: Boolean): String = 
+        if (isArabic) displayNameAr else displayNameEn
+    
+    fun getDescription(isArabic: Boolean): String = 
+        if (isArabic) descriptionAr else descriptionEn
+}
+\end{lstlisting}
+
+\subsection{User Interface Details}
+
+\subsubsection{Onboarding Screen}
+
+A 4-page welcome flow introduces users to the app:
+
+\begin{itemize}
+    \item \textbf{Page 1}: Welcome with Oman emblem
+    \item \textbf{Page 2}: About Oman's heritage (5000+ years)
+    \item \textbf{Page 3}: Preview of famous figures
+    \item \textbf{Page 4}: Language selection (English/Arabic)
+\end{itemize}
+
+Features include horizontal paging, animated page indicators, skip functionality, and preference storage to show only on first launch.
+
+\subsubsection{Home Screen}
+
+The main screen displays:
+
+\begin{itemize}
+    \item Header with app title and language switcher
+    \item Search bar for finding figures
+    \item Horizontal scrolling category filter chips
+    \item Grid layout of figure cards with:
+    \begin{itemize}
+        \item Circular avatar with gradient border (Red to Green)
+        \item Figure name (bilingual)
+        \item Category tag
+        \item Stats row (Era, Works count)
+        \item Favorite heart button
+    \end{itemize}
+    \item Animated bottom navigation bar
+\end{itemize}
+
+\subsubsection{Detail Screen}
+
+Comprehensive figure information:
+
+\begin{itemize}
+    \item Large circular avatar with gradient ring
+    \item Name in both English and Arabic
+    \item Category badge with icon
+    \item Stats row (Era | Works | Years Active)
+    \item Tab navigation: Biography and Achievements
+    \item Biography tab with full text content
+    \item Achievements tab with bullet-point list
+    \item Favorite toggle button
+    \item Share functionality
+    \item Back navigation
+\end{itemize}
+
+\subsubsection{Favorites Screen}
+
+Manages saved figures:
+
+\begin{itemize}
+    \item Header with count badge
+    \item List of favorite figure cards
+    \item Swipe-to-delete gesture with red background
+    \item Empty state with animated heart icon
+    \item "Explore Figures" call-to-action button
+    \item Tap to navigate to detail view
+\end{itemize}
+
+\subsubsection{Settings Screen}
+
+Configuration options:
+
+\begin{itemize}
+    \item Language selection (English/Arabic)
+    \item Theme toggle (Light/Dark mode)
+    \item About section with app information
+    \item App version display
+\end{itemize}
+
+\subsection{User Operation Details}
+
+\textbf{First Launch Flow:}
+\begin{enumerate}
+    \item User opens app for the first time
+    \item Onboarding screens appear
+    \item User swipes through 4 pages or taps "Skip"
+    \item User selects preferred language
+    \item Taps "Start Exploring" to enter main app
+    \item Onboarding preference saved (won't show again)
+\end{enumerate}
+
+\textbf{Main Usage Flow:}
+\begin{enumerate}
+    \item \textbf{Browse}: View all figures on home screen
+    \item \textbf{Filter}: Tap category chips to filter by category
+    \item \textbf{Search}: Type in search bar to find specific figures
+    \item \textbf{View Details}: Tap any card to see full biography
+    \item \textbf{Favorite}: Tap heart icon to save to favorites
+    \item \textbf{Navigate}: Use bottom bar to switch between sections
+    \item \textbf{Switch Language}: Tap language button in header
+\end{enumerate}
+
+\textbf{Favorites Management:}
+\begin{enumerate}
+    \item Tap heart icon on any figure card or detail screen
+    \item Navigate to Favorites tab via bottom navigation
+    \item View all saved figures
+    \item Swipe left on any card to remove from favorites
+    \item Tap card to view full details
+\end{enumerate}
+
+\subsection{Data Repository Details}
+
+\textbf{FiguresRepository:}
+
+Provides centralized data access:
+
+\begin{lstlisting}[language=Kotlin, caption=Repository Functions]
+class FiguresRepository {
+    // Get all figures
+    fun getAllFigures(): List<Figure>
+    
+    // Get single figure by ID
+    fun getFigureById(id: Int): Figure?
+    
+    // Filter by category
+    fun getFiguresByCategory(category: Category): List<Figure>
+    
+    // Get multiple figures by IDs (for favorites)
+    fun getFiguresByIds(ids: List<Int>): List<Figure>
+    
+    // Search figures by name
+    fun searchFigures(query: String): List<Figure>
+}
+\end{lstlisting}
+
+The repository contains 20 carefully researched Omani figures including Sultan Qaboos, Ahmad bin Majid, Mazoon Al Alawi, and many others across all six categories.
+
+\subsection{Local Storage Details}
+
+\textbf{FavoritesDataStore:}
+
+Uses Jetpack DataStore Preferences for persistent storage:
+
+\begin{lstlisting}[language=Kotlin, caption=FavoritesDataStore.kt - Persistent Storage]
+private val Context.dataStore: DataStore<Preferences> 
+    by preferencesDataStore(name = "favorites")
+
+class FavoritesDataStore(private val context: Context) {
+    
+    private val favoriteIdsKey = stringSetPreferencesKey("favorite_ids")
+    
+    val favoriteIds: Flow<Set<Int>> = context.dataStore.data.map { preferences ->
+        preferences[favoriteIdsKey]?.mapNotNull { it.toIntOrNull() }?.toSet() 
+            ?: emptySet()
+    }
+    
+    suspend fun addFavorite(figureId: Int) {
+        context.dataStore.edit { preferences ->
+            val currentFavorites = preferences[favoriteIdsKey] ?: emptySet()
+            preferences[favoriteIdsKey] = currentFavorites + figureId.toString()
+        }
+    }
+    
+    suspend fun removeFavorite(figureId: Int) {
+        context.dataStore.edit { preferences ->
+            val currentFavorites = preferences[favoriteIdsKey] ?: emptySet()
+            preferences[favoriteIdsKey] = currentFavorites - figureId.toString()
+        }
+    }
+    
+    suspend fun toggleFavorite(figureId: Int) {
+        context.dataStore.edit { preferences ->
+            val currentFavorites = preferences[favoriteIdsKey] ?: emptySet()
+            val figureIdStr = figureId.toString()
+            preferences[favoriteIdsKey] = if (figureIdStr in currentFavorites) {
+                currentFavorites - figureIdStr
+            } else {
+                currentFavorites + figureIdStr
+            }
+        }
+    }
+    
+    fun isFavorite(figureId: Int): Flow<Boolean> = 
+        context.dataStore.data.map { preferences ->
+            val favorites = preferences[favoriteIdsKey] ?: emptySet()
+            figureId.toString() in favorites
+        }
+}
+\end{lstlisting}
+
+Data persists across app restarts and is automatically synchronized with the UI through Kotlin Flows.
+
+\subsection{Localization Details}
+
+\textbf{Multi-Language Support:}
+
+\begin{itemize}
+    \item \textbf{String Resources}: Separate XML files for English (values/) and Arabic (values-ar/)
+    \item \textbf{RTL Layout}: Automatic right-to-left layout for Arabic
+    \item \textbf{LocaleManager}: Manages language switching and persistence
+    \item \textbf{Bilingual Content}: All figures have English and Arabic names, descriptions, biographies, and achievements
+    \item \textbf{Auto-mirrored Icons}: Directional icons automatically flip for RTL
+\end{itemize}
+
+\textbf{Locale Configuration:}
+
+\begin{lstlisting}[language=Kotlin, caption=LocaleManager.kt]
+class LocaleManager(private val context: Context) {
+    
+    private val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+    
+    fun getLanguage(): String {
+        return prefs.getString(KEY_LANGUAGE, DEFAULT_LANGUAGE) ?: DEFAULT_LANGUAGE
+    }
+    
+    fun setLanguage(language: String) {
+        prefs.edit().putString(KEY_LANGUAGE, language).apply()
+    }
+    
+    fun isArabic(): Boolean = getLanguage() == ARABIC
+    
+    fun setLocale(context: Context): Context {
+        return updateResources(context, getLanguage())
+    }
+    
+    private fun updateResources(context: Context, language: String): Context {
+        val locale = Locale(language)
+        Locale.setDefault(locale)
+        
+        val config = Configuration(context.resources.configuration)
+        config.setLocale(locale)
+        config.setLayoutDirection(locale)
+        
+        return context.createConfigurationContext(config)
+    }
+    
+    companion object {
+        private const val PREFS_NAME = "locale_prefs"
+        private const val KEY_LANGUAGE = "selected_language"
+        private const val DEFAULT_LANGUAGE = "en"
+        const val ENGLISH = "en"
+        const val ARABIC = "ar"
+    }
+}
+\end{lstlisting}
+
+\subsection{Animation Details}
+
+\textbf{Implemented Animations:}
+
+\begin{itemize}
+    \item \textbf{Card Entrance}: Staggered fade-in and slide-up animation
+    \item \textbf{Card Press}: Scale animation on tap
+    \item \textbf{Favorite Heart}: Pulse animation when toggled
+    \item \textbf{Avatar Rotation}: Optional infinite rotation animation for gradient border
+    \item \textbf{Bottom Bar}: Animated indicator sliding between tabs
+    \item \textbf{Screen Transitions}: Fade and slide between screens
+    \item \textbf{Tab Content}: Crossfade when switching tabs
+    \item \textbf{Swipe to Delete}: Red background reveal with shrink animation
+    \item \textbf{Empty State}: Infinite pulse animation on heart icon
+    \item \textbf{Page Indicator}: Animated dots on onboarding
+\end{itemize}
+
+\section{SCREENSHOTS}
+
+\arrayrulecolor{headercolor}
+\begin{longtable}{|c|p{8cm}|}
+\caption{Application Screenshots with Descriptions} \\
+\hline
+\textbf{Screenshots} & \textbf{Descriptions} \\
+\hline
+\endfirsthead
+
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+\hline
+\textbf{Screenshots} & \textbf{Descriptions} \\
+\hline
+\endhead
+
+\hline
+\multicolumn{2}{r}{\textit{Continued on next page}} \\
+\endfoot
+
+\hline
+\endlastfoot
+
+% === ONBOARDING SCREENS ===
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183240.png}} & \textbf{Onboarding - Welcome:} First page showing Oman map with national flag colors and emblem. Title "Welcome to Oman Culture" with subtitle "Discover the rich heritage of the Sultanate of Oman". Page indicator dots (1 of 4) and Next button. \\
+\hline
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183314.png}} & \textbf{Onboarding - Land of Heritage:} Second page featuring illustration of traditional Omani fort. Describes Oman's 5,000 years of civilization, ancient forts, and warm hospitality. Back and Next navigation buttons. \\
+\hline
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183322.png}} & \textbf{Onboarding - Meet the Icons:} Third page with Omani cultural icons collage (traditional dress, mosque, lantern, fort, flags). Introduces the app's purpose: exploring legendary leaders, poets, artists, athletes, and scholars. \\
+\hline
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183328.png}} & \textbf{Onboarding - Language Selection:} Final page with Oman flag imagery. Two language options: English (UK flag) and العربية/Arabic (Oman flag). "Start Exploring" button to enter the main app. \\
+\hline
+
+% === HOME SCREEN - ENGLISH ===
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183536.png}} & \textbf{Home Screen (English):} Main screen with "Discover Oman" header and EN/AR language toggle. Search bar placeholder "Search figures...". Category chips: All, Historical Leaders, Poets \& Writers. Figure cards showing Ahmed Al-Maashani, Ahmed bin Majid, Mona Al-Said, and Imam Ahmed bin Said with gradient avatar borders. \\
+\hline
+
+% === MULTI-LANGUAGE FEATURE ===
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183545.png}} & \textbf{Home Screen (Arabic - RTL):} \textit{Multi-language feature demonstration.} Same screen in Arabic with complete RTL layout. Header shows "اكتشف عُمان". All figure names in Arabic (أحمد المعشني، أحمد بن ماجد). Category chips and bottom navigation labels translated. Demonstrates automatic layout direction reversal. \\
+\hline
+
+% === CATEGORY FILTERS ===
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183553.png}} & \textbf{Category Filter - Historical Leaders:} Filtered view showing only Historical Leaders category (red chip selected). Displays Sultan Qaboos bin Said (1940-2020), Said bin Sultan (1791-1856), Sultan Haitham bin Tariq, and Imam Ahmed bin Said. \\
+\hline
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183600.png}} & \textbf{Category Filter - Poets \& Writers:} Blue chip selected showing literary figures: Abu Muslim al-Bahlani (1860-1920), Abdullah al-Tai (1924-1973), Saif al-Rahbi (1956-Present), and Jokha Alharthi (1978-Present, Man Booker Prize winner). \\
+\hline
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183608.png}} & \textbf{Category Filter - Artists \& Musicians:} Orange chip selected displaying artists: Salim bin Ali (1950-Present, 25 works) and Anwar Sonya (1948-Present, 200 works). Shows category-specific color coding. \\
+\hline
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183616.png}} & \textbf{Category Filter - Sports Icons:} Red chip selected showing athletes: Ali Al-Habsi (goalkeeper, 1981-Present, 100 works), Ahmed Al-Maashani, Imad Al-Hosni (1987-Present), and Mohsin Al-Ghassani (1975-Present). \\
+\hline
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183625.png}} & \textbf{Category Filter - Scientists \& Scholars:} Blue chip selected showing: Ahmed bin Majid (famous navigator, 1421-1500, 40 works), Sheikh Ahmed al-Khalili (1942-Present, 35 works), and Dr. Asila Al-Maamari (1970-Present, 30 works). \\
+\hline
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183636.png}} & \textbf{Category Filter - Modern Influencers:} Orange chip selected displaying contemporary figures: Mona Al-Said (1970-Present, 10 works), Khalid Al-Sinani (1985-Present, 8 works), and Fatma Al-Nabhani (tennis player). \\
+\hline
+
+% === FAVORITES SCREEN ===
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183700.png}} & \textbf{Favorites Screen:} Shows "Favorites" header with "3 saved figures" count. Lists Sultan Qaboos bin Said (Historical Leaders), Saif al-Rahbi (Poets \& Writers), and Imad Al-Hosni (Sports Icons). Each card has filled red heart icon and arrow button. \\
+\hline
+
+% === SETTINGS SCREEN ===
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183715.png}} & \textbf{Settings Screen (Light Mode):} Configuration page with Language section (English selected, Arabic option), Appearance section (Dark Mode toggle disabled), and About section showing App Name: Oman Culture, Version: 1.0.0, Developer: Gheith Alrawahi 2120246006. \\
+\hline
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183723.png}} & \textbf{Settings Screen (Dark Mode):} \textit{Theme switching demonstration.} Same settings page with Dark Mode enabled. Dark background with light text. Shows theme toggle in "Enabled" state. Demonstrates app-wide dark theme support. \\
+\hline
+
+% === DARK MODE FEATURE ===
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183735.png}} & \textbf{Home Screen (Dark Mode):} \textit{Theme feature demonstration.} Dark theme applied to home screen. Dark background with light text and cards. Category chips and figure cards adapt to dark color scheme while maintaining readability. \\
+\hline
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183742.png}} & \textbf{Detail Screen - Biography (Dark Mode):} Sultan Qaboos profile in dark theme. Large circular avatar with gradient border. Name in English and Arabic (السلطان قابوس بن سعيد). Stats row: Era 1940-2020, Works 12, Years 50. Biography tab selected with full text content. \\
+\hline
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183748.png}} & \textbf{Detail Screen - Achievements (Dark Mode):} Same profile with Achievements tab selected. Bullet-point list: Modernized Oman's infrastructure, Established diplomatic relations worldwide, Founded Sultan Qaboos University, Developed healthcare and education. \\
+\hline
+
+% === LIGHT MODE DETAIL ===
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183759.png}} & \textbf{Detail Screen - Biography (Light Mode):} \textit{Comparison with dark mode.} Same Sultan Qaboos profile in light theme. Shows consistent layout and information across themes. Pink gradient header, white content area. \\
+\hline
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_183805.png}} & \textbf{Detail Screen - Achievements (Light Mode):} Light theme achievements view. Same content as dark mode version, demonstrating theme consistency. Clean white background with colored accent elements. \\
+\hline
+
+% === ADDITIONAL FEATURES ===
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_184309.png}} & \textbf{Share Feature:} Share dialog for Jokha Alharthi (Poets \& Writers). Shows sharing text with name, description "First Arab winner of Man Booker International Prize", and image URL. Share options: Quick Share, Chrome, Drive, Messages. \\
+\hline
+\raisebox{-0.5\height}{\includegraphics[width=4cm]{Screenshot_20260111_184322.png}} & \textbf{Detail Screen with Favorite:} Saif al-Rahbi profile (Poets \& Writers, 1956-Present). Shows filled red heart icon indicating figure is saved to favorites. Biography describes him as prominent contemporary Omani poet and founder of 'Nizwa' cultural magazine. \\
+
+\end{longtable}
+\arrayrulecolor{black}
+
+\section{CODE IMPLEMENTATION}
+
+\subsection{Theme Configuration}
+
+\begin{lstlisting}[language=Kotlin, caption=Color.kt - Theme Colors]
+// Primary
+val Primary = Color(0xFFE63946)
+val PrimaryLight = Color(0xFFFF6B6B)
+val PrimaryDark = Color(0xFFB82E3B)
+
+// Secondary
+val Secondary = Color(0xFF457B9D)
+val SecondaryLight = Color(0xFF6BA3C4)
+val SecondaryDark = Color(0xFF1D3557)
+
+// Tertiary
+val Tertiary = Color(0xFFF4A261)
+
+// Background & Surface
+val BackgroundLight = Color(0xFFFAFAFA)
+val BackgroundDark = Color(0xFF121212)
+val SurfaceLight = Color(0xFFFFFFFF)
+val SurfaceDark = Color(0xFF1E1E1E)
+
+private val LightColorScheme = lightColorScheme(
+    primary = Primary,
+    onPrimary = Color.White,
+    primaryContainer = PrimaryLight,
+    secondary = Secondary,
+    tertiary = Tertiary,
+    background = BackgroundLight,
+    surface = SurfaceLight,
+    onBackground = Color(0xFF1C1B1F),
+    onSurface = Color(0xFF1C1B1F)
+)
+\end{lstlisting}
+
+\subsection{Navigation Setup}
+
+\begin{lstlisting}[language=Kotlin, caption=NavGraph.kt - Navigation with Animations]
+@Composable
+fun NavGraph(
+    navController: NavHostController,
+    startDestination: String,
+    isArabic: Boolean = false,
+    favoriteIds: Set<Int> = emptySet(),
+    onToggleFavorite: (Int) -> Unit = {}
+) {
+    NavHost(
+        navController = navController,
+        startDestination = startDestination
+    ) {
+        // Onboarding with fade animation
+        composable(
+            route = Screen.Onboarding.route,
+            enterTransition = { fadeIn(tween(300)) },
+            exitTransition = { fadeOut(tween(300)) }
+        ) {
+            OnboardingScreen(
+                onComplete = {
+                    navController.navigate(Screen.Home.route) {
+                        popUpTo(Screen.Onboarding.route) { inclusive = true }
+                    }
+                }
+            )
+        }
+        
+        // Detail with slide animation
+        composable(
+            route = Screen.Detail.route,
+            arguments = listOf(
+                navArgument("figureId") { type = NavType.IntType }
+            ),
+            enterTransition = {
+                slideIntoContainer(
+                    towards = SlideDirection.Left,
+                    animationSpec = tween(300)
+                )
+            },
+            exitTransition = {
+                slideOutOfContainer(
+                    towards = SlideDirection.Right,
+                    animationSpec = tween(300)
+                )
+            }
+        ) { backStackEntry ->
+            val figureId = backStackEntry.arguments?.getInt("figureId") ?: 0
+            DetailScreen(
+                figureId = figureId,
+                isArabic = isArabic,
+                isFavorite = figureId in favoriteIds,
+                onBackClick = { navController.popBackStack() },
+                onToggleFavorite = { onToggleFavorite(figureId) }
+            )
+        }
+    }
+}
+\end{lstlisting}
+
+\subsection{Key Components}
+
+\begin{lstlisting}[language=Kotlin, caption=FigureAvatar.kt - Animated Gradient Avatar]
+@Composable
+fun FigureAvatar(
+    imageUrl: String,
+    contentDescription: String?,
+    modifier: Modifier = Modifier,
+    size: Dp = 120.dp,
+    borderWidth: Dp = 4.dp,
+    animated: Boolean = false
+) {
+    val infiniteTransition = rememberInfiniteTransition()
+    val rotation by infiniteTransition.animateFloat(
+        initialValue = 0f,
+        targetValue = 360f,
+        animationSpec = infiniteRepeatable(
+            animation = tween(8000, easing = LinearEasing),
+            repeatMode = RepeatMode.Restart
+        )
+    )
+    
+    Box(
+        modifier = modifier
+            .size(size)
+            .shadow(elevation = 8.dp, shape = CircleShape)
+    ) {
+        // Sweep gradient border with optional rotation
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .then(if (animated) Modifier.rotate(rotation) else Modifier)
+                .background(
+                    brush = Brush.sweepGradient(
+                        colors = listOf(
+                            Primary, PrimaryLight, Tertiary,
+                            SecondaryLight, Secondary, Primary
+                        )
+                    ),
+                    shape = CircleShape
+                )
+                .padding(borderWidth)
+        ) {
+            SubcomposeAsyncImage(
+                model = ImageRequest.Builder(LocalContext.current)
+                    .data(imageUrl)
+                    .crossfade(true)
+                    .build(),
+                contentDescription = contentDescription,
+                modifier = Modifier.fillMaxSize().clip(CircleShape),
+                contentScale = ContentScale.Crop,
+                loading = {
+                    Icon(
+                        imageVector = Icons.Default.Person,
+                        contentDescription = null,
+                        tint = Primary.copy(alpha = 0.3f)
+                    )
+                }
+            )
+        }
+    }
+}
+\end{lstlisting}
+
+\subsection{ViewModel Example}
+
+\begin{lstlisting}[language=Kotlin, caption=HomeViewModel.kt - State Management]
+data class HomeUiState(
+    val figures: List<Figure> = emptyList(),
+    val filteredFigures: List<Figure> = emptyList(),
+    val categories: List<Category> = emptyList(),
+    val selectedCategory: Category? = null,
+    val searchQuery: String = "",
+    val isLoading: Boolean = true,
+    val favoriteIds: Set<Int> = emptySet(),
+    val isArabic: Boolean = false
+)
+
+class HomeViewModel(application: Application) : AndroidViewModel(application) {
+    
+    private val repository = FiguresRepository(application.applicationContext)
+    private val _uiState = MutableStateFlow(HomeUiState())
+    val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
+    
+    init {
+        loadData()
+    }
+    
+    private fun loadData() {
+        viewModelScope.launch {
+            val figures = repository.getAllFigures()
+            val categories = repository.getCategories()
+            _uiState.update {
+                it.copy(
+                    figures = figures,
+                    filteredFigures = figures,
+                    categories = categories,
+                    isLoading = false
+                )
+            }
+        }
+    }
+    
+    fun onSearchQueryChange(query: String) {
+        _uiState.update { state ->
+            val filtered = if (query.isBlank()) {
+                applyFilters(state.figures, state.selectedCategory)
+            } else {
+                repository.searchFigures(query).let { searchResults ->
+                    applyFilters(searchResults, state.selectedCategory)
+                }
+            }
+            state.copy(searchQuery = query, filteredFigures = filtered)
+        }
+    }
+    
+    fun onCategorySelected(category: Category?) {
+        _uiState.update { state ->
+            val filtered = applyFilters(state.figures, category)
+            state.copy(selectedCategory = category, filteredFigures = filtered)
+        }
+    }
+    
+    private fun applyFilters(figures: List<Figure>, category: Category?): List<Figure> {
+        return if (category == null) figures 
+               else figures.filter { it.category == category }
+    }
+}
+\end{lstlisting}
+
+\section{TESTING \& QUALITY ASSURANCE}
+
+\subsection{Testing Performed}
+
+\begin{itemize}
+    \item \textbf{Navigation Testing}: All screen transitions work correctly
+    \item \textbf{Language Switching}: Instant language change without restart
+    \item \textbf{RTL Layout}: Complete layout reversal for Arabic verified
+    \item \textbf{Favorites Persistence}: Data survives app restart
+    \item \textbf{Search Functionality}: Real-time filtering works correctly
+    \item \textbf{Category Filtering}: Proper figure filtering by category
+    \item \textbf{Animations}: Smooth 60fps animations throughout
+    \item \textbf{Image Loading}: Efficient caching with Coil
+    \item \textbf{Screen Rotation}: State preservation on rotation
+    \item \textbf{Empty States}: Proper handling of no results/favorites
+\end{itemize}
+
+\subsection{Performance Optimizations}
+
+\begin{itemize}
+    \item \textbf{LazyColumn/LazyVerticalGrid}: Efficient list rendering
+    \item \textbf{Image Caching}: Coil memory and disk caching enabled
+    \item \textbf{State Hoisting}: Minimized recompositions
+    \item \textbf{Remember \& Keys}: Proper state management in composables
+    \item \textbf{R8 Minification}: Code shrinking and optimization enabled
+    \item \textbf{Coroutines}: Asynchronous operations for smooth UI
+\end{itemize}
+
+\section{CONCLUSIONS}
+
+The Oman Culture Mobile Application successfully demonstrates modern Android development practices while celebrating Oman's rich cultural heritage. The app achieves its goals of providing an engaging, educational, and beautifully designed platform for exploring famous Omani figures.
+
+\textbf{Key Achievements:}
+\begin{itemize}
+    \item \textbf{Complete Implementation}: All planned features successfully implemented
+    \item \textbf{Modern Architecture}: Clean MVVM architecture with proper separation of concerns
+    \item \textbf{Bilingual Support}: Full English and Arabic localization with RTL layout
+    \item \textbf{Rich Content}: 20 carefully researched Omani figures across 6 categories
+    \item \textbf{Smooth UX}: Polished animations and transitions throughout
+    \item \textbf{Persistent Storage}: Favorites system with DataStore
+    \item \textbf{Material Design}: Consistent use of Material 3 components
+    \item \textbf{Modern Color Scheme}: Red, blue, and orange palette with gradient effects
+\end{itemize}
+
+\textbf{Technical Highlights:}
+\begin{itemize}
+    \item Jetpack Compose for declarative UI
+    \item Navigation Compose for type-safe navigation
+    \item ViewModel for lifecycle-aware state management
+    \item Coil for efficient image loading
+    \item DataStore for modern data persistence
+    \item Kotlin Flows for reactive data streams
+    \item Material 3 theming system
+    \item Comprehensive localization support
+\end{itemize}
+
+\textbf{Future Enhancement Opportunities:}
+\begin{itemize}
+    \item \textbf{Backend Integration}: Connect to REST API for dynamic content updates
+    \item \textbf{User Accounts}: Add authentication and cloud sync for favorites
+    \item \textbf{Social Features}: Share figures on social media platforms
+    \item \textbf{Offline Mode}: Cache all content for offline access
+    \item \textbf{Audio Content}: Add audio biographies and pronunciations
+    \item \textbf{Quiz Feature}: Interactive quizzes about Omani culture
+    \item \textbf{Timeline View}: Historical timeline of figures
+    \item \textbf{AR Experience}: Augmented reality for landmarks and monuments
+    \item \textbf{Accessibility}: Enhanced support for screen readers and TalkBack
+    \item \textbf{Widget Support}: Home screen widgets for daily figure highlights
+\end{itemize}
+
+\textbf{Learning Outcomes:}
+\begin{itemize}
+    \item Mastery of Jetpack Compose declarative UI framework
+    \item Implementation of MVVM architecture pattern
+    \item Multi-language app development with RTL support
+    \item State management with ViewModels and Flows
+    \item Modern Android navigation patterns
+    \item Material Design 3 theming and components
+    \item Local data persistence with DataStore
+    \item Image loading and caching strategies
+    \item Animation and transition implementation
+    \item Clean code architecture and best practices
+\end{itemize}
+
+The Oman Culture app serves as both a functional educational tool and a demonstration of modern Android development capabilities. It successfully combines technical excellence with cultural appreciation, creating an engaging platform for users to discover and learn about Oman's remarkable heritage and its influential figures throughout history.
+
+\end{document}
